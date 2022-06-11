@@ -1,9 +1,9 @@
 import 'package:advance_notification/advance_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xelpcom/controllers/authController.dart';
-import 'package:xelpcom/controllers/mathController.dart';
-import 'package:xelpcom/screens/login_screen.dart';
+import '../controllers/authController.dart';
+import '../controllers/mathController.dart';
+import 'login_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -49,7 +49,7 @@ class _MainScreenState extends State<MainScreen> {
           child: Column(
             children: [
               Row(
-                children: [
+                children: const [
                   Padding(
                     padding: EdgeInsets.only(top: 24, left: 16),
                     child: Text(
@@ -67,8 +67,8 @@ class _MainScreenState extends State<MainScreen> {
                   brightness: Brightness.dark,
                 ),
                 child: Stepper(
-                  physics:
-                      ScrollPhysics(parent: NeverScrollableScrollPhysics()),
+                  physics: const ScrollPhysics(
+                      parent: NeverScrollableScrollPhysics()),
                   // elevation: 10,
                   onStepContinue: () => onStepContinue(context),
                   onStepCancel: () {
@@ -81,15 +81,15 @@ class _MainScreenState extends State<MainScreen> {
                   currentStep: currentStep,
                   steps: [
                     Step(
-                      title: Text(
+                      title: const Text(
                         "Enter 1st number",
                       ),
                       content: TextField(
                         controller: textOneController,
-                        style:
-                            TextStyle(color: Colors.blueAccent, fontSize: 24),
+                        style: const TextStyle(
+                            color: Colors.blueAccent, fontSize: 24),
                         keyboardType: TextInputType.number,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           // labelText: "Email",
                           labelStyle:
                               TextStyle(color: Colors.white, fontSize: 18),
@@ -100,15 +100,15 @@ class _MainScreenState extends State<MainScreen> {
                       ),
                     ),
                     Step(
-                      title: Text(
+                      title: const Text(
                         "Enter 2nd number",
                       ),
                       content: TextField(
                         controller: textTwoController,
-                        style:
-                            TextStyle(color: Colors.blueAccent, fontSize: 24),
+                        style: const TextStyle(
+                            color: Colors.blueAccent, fontSize: 24),
                         keyboardType: TextInputType.number,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           // labelText: "Email",
                           labelStyle:
                               TextStyle(color: Colors.white, fontSize: 18),
@@ -119,15 +119,15 @@ class _MainScreenState extends State<MainScreen> {
                       ),
                     ),
                     Step(
-                      title: Text(
+                      title: const Text(
                         "Enter 3rd number",
                       ),
                       content: TextField(
                         controller: textThreeController,
-                        style:
-                            TextStyle(color: Colors.blueAccent, fontSize: 24),
+                        style: const TextStyle(
+                            color: Colors.blueAccent, fontSize: 24),
                         keyboardType: TextInputType.number,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           // labelText: "Email",
                           labelStyle:
                               TextStyle(color: Colors.white, fontSize: 18),
@@ -150,9 +150,9 @@ class _MainScreenState extends State<MainScreen> {
                   height: 200,
                   child: Column(children: [
                     Row(
-                      children: [
+                      children: const [
                         Padding(
-                          padding: const EdgeInsets.all(16.0),
+                          padding: EdgeInsets.all(16.0),
                           child: Text(
                             "The Prime Numbers are :",
                             style: TextStyle(color: Colors.white, fontSize: 18),
@@ -167,7 +167,8 @@ class _MainScreenState extends State<MainScreen> {
                         children: [
                           Text(
                             "${prime}",
-                            style: TextStyle(color: Colors.white, fontSize: 48),
+                            style: const TextStyle(
+                                color: Colors.white, fontSize: 48),
                           )
                         ],
                       ),
@@ -176,11 +177,11 @@ class _MainScreenState extends State<MainScreen> {
                 ),
               ),
               _isLoading
-                  ? Center(
+                  ? const Center(
                       child: CircularProgressIndicator(),
                     )
                   : ElevatedButton(
-                      onPressed: () => signout(), child: Text("log out!"))
+                      onPressed: () => signout(), child: const Text("log out!"))
             ],
           ),
         ),
@@ -189,11 +190,9 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   void onStepContinue(BuildContext context) {
-    final isLastStep = currentStep == 2;
-
     if (currentStep == 0) {
       if (textOneController.text.isEmpty) {
-        AdvanceSnackBar(message: "Enter value").show(context);
+        const AdvanceSnackBar(message: "Enter value").show(context);
       } else {
         setState(() {
           currentStep += 1;
@@ -203,7 +202,7 @@ class _MainScreenState extends State<MainScreen> {
     }
     if (currentStep == 1) {
       if (textTwoController.text.isEmpty) {
-        AdvanceSnackBar(message: "Enter value").show(context);
+        const AdvanceSnackBar(message: "Enter value").show(context);
       } else {
         setState(() {
           currentStep += 1;
@@ -213,7 +212,7 @@ class _MainScreenState extends State<MainScreen> {
     }
     if (currentStep == 2) {
       if (textThreeController.text.isEmpty) {
-        AdvanceSnackBar(message: "Enter value").show(context);
+        const AdvanceSnackBar(message: "Enter value").show(context);
       } else {
         setState(() {
           prime = _mathController.getPrime;

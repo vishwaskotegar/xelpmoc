@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:xelpcom/resources/auth_methods.dart';
+import '../resources/auth_methods.dart';
 
 class AuthController extends GetxController {
   String _email = '';

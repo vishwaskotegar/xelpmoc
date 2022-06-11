@@ -2,9 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xelpcom/firebase_options.dart';
-import 'package:xelpcom/screens/mainScreen.dart';
-import 'package:xelpcom/screens/sign_up_screen.dart';
+import 'firebase_options.dart';
+import 'screens/mainScreen.dart';
+import 'screens/sign_up_screen.dart';
 
 import 'screens/login_screen.dart';
 
@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
     return GetMaterialApp(
       title: 'XelpCom',
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xFF193952),
+        scaffoldBackgroundColor: const Color(0xFF193952),
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.active) {
               if (snapshot.hasData) {
-                return MainScreen();
+                return const MainScreen();
               } else if (snapshot.hasError) {
                 return Center(child: Text('${snapshot.error}'));
               }

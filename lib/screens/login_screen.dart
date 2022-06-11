@@ -1,8 +1,8 @@
 import 'package:advance_notification/advance_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:xelpcom/screens/mainScreen.dart';
-import 'package:xelpcom/screens/sign_up_screen.dart';
+import 'mainScreen.dart';
+import 'sign_up_screen.dart';
 
 import '../controllers/authController.dart';
 import '../resources/auth_methods.dart';
@@ -50,23 +50,23 @@ class _LoginScreenState extends State<LoginScreen> {
             // mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Container(
                 width: 150,
-                child: Text(
+                child: const Text(
                   "Log In",
                   style: TextStyle(fontSize: 40, color: Colors.white),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               TextField(
-                style: TextStyle(color: Colors.blueAccent, fontSize: 24),
+                style: const TextStyle(color: Colors.blueAccent, fontSize: 24),
                 keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: "Email",
                   labelStyle: TextStyle(color: Colors.white, fontSize: 18),
                 ),
@@ -75,10 +75,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 },
               ),
               TextField(
-                style: TextStyle(color: Colors.blueAccent, fontSize: 24),
+                style: const TextStyle(color: Colors.blueAccent, fontSize: 24),
                 keyboardType: TextInputType.text,
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: "Password",
                   labelStyle: TextStyle(color: Colors.white, fontSize: 18),
                 ),
@@ -91,15 +91,15 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "Dont have an account? ",
                       style: TextStyle(color: Colors.white, fontSize: 14),
                     ),
                     InkWell(
                       onTap: () {
-                        Get.to(() => SignupScreen());
+                        Get.to(() => const SignupScreen());
                       },
-                      child: Text(
+                      child: const Text(
                         "Sign up",
                         style: TextStyle(
                             color: Colors.white,
@@ -114,12 +114,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 16.0),
                   child: _isLoading
-                      ? Center(
+                      ? const Center(
                           child: CircularProgressIndicator(),
                         )
                       : ElevatedButton(
                           onPressed: login,
-                          child: Text("Login"),
+                          child: const Text("Login"),
                         ),
                 ),
               ),

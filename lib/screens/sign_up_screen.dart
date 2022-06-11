@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
-import 'package:xelpcom/controllers/authController.dart';
-import 'package:xelpcom/screens/mainScreen.dart';
+import '../controllers/authController.dart';
+import 'mainScreen.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({Key? key}) : super(key: key);
@@ -27,7 +27,7 @@ class _SignupScreenState extends State<SignupScreen> {
       isLoading = false;
     });
     if (result == "success") {
-      Get.offAll(() => MainScreen());
+      Get.offAll(() => const MainScreen());
     }
     AdvanceSnackBar(message: result).show(context);
   }
@@ -46,22 +46,22 @@ class _SignupScreenState extends State<SignupScreen> {
             // mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Container(
                 width: 150,
-                child: Text(
+                child: const Text(
                   "Sign up NOW",
                   style: TextStyle(fontSize: 40, color: Colors.white),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               TextField(
                 keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     labelText: "Email",
                     labelStyle: TextStyle(color: Colors.white)),
                 onChanged: (email) {
@@ -71,7 +71,7 @@ class _SignupScreenState extends State<SignupScreen> {
               TextField(
                 keyboardType: TextInputType.text,
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     labelText: "Password",
                     labelStyle: TextStyle(color: Colors.white)),
                 onChanged: (password) {
@@ -81,7 +81,7 @@ class _SignupScreenState extends State<SignupScreen> {
               TextFormField(
                 keyboardType: TextInputType.text,
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     labelText: "Confirm Password",
                     labelStyle: TextStyle(color: Colors.white)),
                 onChanged: (confirmPassword) {
@@ -89,7 +89,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 },
               ),
               Center(
-                child: Container(
+                child: SizedBox(
                   width: MediaQuery.of(context).size.width / 2,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -98,7 +98,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         padding: const EdgeInsets.only(top: 16.0),
                         child: ElevatedButton(
                           onPressed: signup,
-                          child: Text("Submit"),
+                          child: const Text("Submit"),
                         ),
                       ),
                       Padding(
@@ -107,7 +107,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           onPressed: () {
                             Get.back();
                           },
-                          child: Text("Cancel"),
+                          child: const Text("Cancel"),
                         ),
                       ),
                     ],
