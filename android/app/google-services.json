@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "790979539420",
+    "project_id": "xelpcom-338b9",
+    "storage_bucket": "xelpcom-338b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790979539420:android:0522f038bf4270c8f25f19",
+        "android_client_info": {
+          "package_name": "com.example.xelpcom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790979539420-birvnq2utqbshqn3stb2vbdns9j4riqq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwRGRpX5RXPGcq1jZltw145morpV2Gb78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790979539420-birvnq2utqbshqn3stb2vbdns9j4riqq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "790979539420-hb5lqsr5hcve62dn9s93a5d03in0dflu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.xelpcom"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
