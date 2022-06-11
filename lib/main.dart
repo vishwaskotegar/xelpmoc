@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'XelpCom',
+      title: 'XelpMoc',
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFF193952),
         primarySwatch: Colors.blue,
