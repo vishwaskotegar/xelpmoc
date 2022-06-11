@@ -4,7 +4,7 @@ A Check for Prime App
 
 ## Built using FLUTTER and FIREBASE
 
- - The app consists of user state management, database management, flutter concepts, material theme UI
+ - The app consists of user state management, User Authentication, flutter concepts, material theme UI
  
  - Android apk : 
 ```dart
