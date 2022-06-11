@@ -1,6 +1,6 @@
-# instagram
+# XelpMoc
 
-An instagram Clone app
+A Check for Prime App
 
 ## Built using FLUTTER and FIREBASE
 
