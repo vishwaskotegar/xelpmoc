@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:advance_notification/advance_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -166,7 +167,7 @@ class _MainScreenState extends State<MainScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "${prime}",
+                            "$prime",
                             style: const TextStyle(
                                 color: Colors.white, fontSize: 48),
                           )

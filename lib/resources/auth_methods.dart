@@ -16,7 +16,6 @@ class AuthMethods {
         res = 'weak password';
       }
     } catch (e) {
-      // TODO
       res = e.toString();
     }
 

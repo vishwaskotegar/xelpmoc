@@ -1,7 +1,5 @@
 import 'package:advance_notification/advance_notification.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import '../controllers/authController.dart';
 import 'mainScreen.dart';
@@ -49,9 +47,9 @@ class _SignupScreenState extends State<SignupScreen> {
               const SizedBox(
                 height: 50,
               ),
-              Container(
+              const SizedBox(
                 width: 150,
-                child: const Text(
+                child: Text(
                   "Sign up NOW",
                   style: TextStyle(fontSize: 40, color: Colors.white),
                 ),

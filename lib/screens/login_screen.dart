@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'mainScreen.dart';
 import 'sign_up_screen.dart';
-
 import '../controllers/authController.dart';
-import '../resources/auth_methods.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -53,9 +51,9 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(
                 height: 50,
               ),
-              Container(
+              const SizedBox(
                 width: 150,
-                child: const Text(
+                child: Text(
                   "Log In",
                   style: TextStyle(fontSize: 40, color: Colors.white),
                 ),

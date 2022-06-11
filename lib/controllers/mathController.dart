@@ -1,5 +1,5 @@
+// ignore: file_names
 import 'dart:math';
-
 import 'package:get/get.dart';
 
 class MathController extends GetxController {
@@ -24,7 +24,7 @@ class MathController extends GetxController {
     _valueThree = value;
   }
 
-  bool CheckPrime(int num) {
+  bool checkPrime(int num) {
     if (num <= 1) {
       return false;
     }
@@ -39,13 +39,13 @@ class MathController extends GetxController {
 
   Set<int> get getPrime {
     prime = {};
-    if (CheckPrime(_valueOne)) {
+    if (checkPrime(_valueOne)) {
       prime.add(_valueOne);
     }
-    if (CheckPrime(_valueTwo)) {
+    if (checkPrime(_valueTwo)) {
       prime.add(_valueTwo);
     }
-    if (CheckPrime(_valueThree)) {
+    if (checkPrime(_valueThree)) {
       prime.add(_valueThree);
     }
 

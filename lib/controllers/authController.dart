@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:get/get.dart';
 import '../resources/auth_methods.dart';
 
@@ -10,19 +11,19 @@ class AuthController extends GetxController {
   // String get confirmpassword => _confirmPassword;
   set setEmail(setEmail) {
     _email = setEmail;
-    print(_email);
+    // print(_email);
     // update();
   }
 
   set setPassword(setPassword) {
     _password = setPassword;
-    print(_password);
+    // print(_password);
     // update();
   }
 
   set setConfirmPassword(setConfirmPassword) {
     _confirmPassword = setConfirmPassword;
-    print(_confirmPassword);
+    // print(_confirmPassword);
     // update();
   }
 
