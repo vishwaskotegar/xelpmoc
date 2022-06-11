@@ -10,6 +10,7 @@ An instagram Clone app
 ```dart
 flutter build apk
 ```
+apk location - build\app\outputs\flutter-apk\app-release.apk
  
 # Screens -
 ## Login screen
