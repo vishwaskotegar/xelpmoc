@@ -1,16 +1,30 @@
-# xelpcom
+# instagram
 
-A new Flutter project.
+An instagram Clone app
 
-## Getting Started
+## Built using FLUTTER and FIREBASE
 
-This project is a starting point for a Flutter application.
+ - The app consists of user state management, database management, flutter concepts, material theme UI
+ 
+ - Android apk : 
+```dart
+flutter build apk
+```
+ 
+# Screens -
+## Login screen
+##### For existing users
+![Login in](https://drive.google.com/thumbnail?id=15TRR-R6bltZ-nk6CKOPcCCBIazQXVMJc "login in")
+# sign up screen
 
-A few resources to get you started if this is your first Flutter project:
+##### For new Users
+![Sign in](https://drive.google.com/thumbnail?id=15BV0bnk_GqjPVAQqRkR9X-ibCXOMGVGp  "Sign in")
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Main screen
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
+![Main Screem](https://drive.google.com/thumbnail?id=1zMW-4UAPrdKbIRkC-Q3Yg_k0CjMBbgAi   "Main Screen")
+
+
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
