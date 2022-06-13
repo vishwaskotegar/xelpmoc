@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
       // AdvanceSnackBar(message: "Logged In", isFixed: false).show(context);
       loginController.setEmail = "";
       loginController.setPassword = "";
-      Get.to(() => const MainScreen());
+      Get.offAll(() => const MainScreen());
     } else {
       AdvanceSnackBar(message: res, bgColor: Colors.red, isFixed: false)
           .show(context);

@@ -58,30 +58,33 @@ class _SignupScreenState extends State<SignupScreen> {
                 height: 50,
               ),
               TextField(
+                style: const TextStyle(color: Colors.blueAccent, fontSize: 24),
                 keyboardType: TextInputType.emailAddress,
                 decoration: const InputDecoration(
                     labelText: "Email",
-                    labelStyle: TextStyle(color: Colors.white)),
+                    labelStyle: TextStyle(color: Colors.white, fontSize: 18)),
                 onChanged: (email) {
                   signupController.setEmail = email;
                 },
               ),
               TextField(
+                style: const TextStyle(color: Colors.blueAccent, fontSize: 24),
                 keyboardType: TextInputType.text,
                 obscureText: true,
                 decoration: const InputDecoration(
                     labelText: "Password",
-                    labelStyle: TextStyle(color: Colors.white)),
+                    labelStyle: TextStyle(color: Colors.white, fontSize: 18)),
                 onChanged: (password) {
                   signupController.setPassword = password;
                 },
               ),
               TextFormField(
+                style: const TextStyle(color: Colors.blueAccent, fontSize: 24),
                 keyboardType: TextInputType.text,
                 obscureText: true,
                 decoration: const InputDecoration(
                     labelText: "Confirm Password",
-                    labelStyle: TextStyle(color: Colors.white)),
+                    labelStyle: TextStyle(color: Colors.white, fontSize: 18)),
                 onChanged: (confirmPassword) {
                   signupController.setConfirmPassword = confirmPassword;
                 },
@@ -89,27 +92,34 @@ class _SignupScreenState extends State<SignupScreen> {
               Center(
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width / 2,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 16.0),
-                        child: ElevatedButton(
-                          onPressed: signup,
-                          child: const Text("Submit"),
+                  child: isLoading
+                      ? const Padding(
+                          padding: EdgeInsets.all(24.0),
+                          child: Center(
+                            child: CircularProgressIndicator(),
+                          ),
+                        )
+                      : Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 16.0),
+                              child: ElevatedButton(
+                                onPressed: signup,
+                                child: const Text("Submit"),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 16.0),
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  Get.back();
+                                },
+                                child: const Text("Cancel"),
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 16.0),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Get.back();
-                          },
-                          child: const Text("Cancel"),
-                        ),
-                      ),
-                    ],
-                  ),
                 ),
               ),
             ],
